@@ -12,8 +12,7 @@ What doesn't appear to work:
 
 
 # Example 1: Adding classes
-`
-
+```
     KZMachOSymbolTable *symtab = [KZMachOSymbolTable new];
 
     if([UIDevice currentDevice].systemVersion.intValue == 7) {
@@ -29,13 +28,13 @@ What doesn't appear to work:
         UIAlertController *controller = [UIAlertController new];
 
     }
-`
+```
 
 #Example 2: Adding string symbols
-`
-
+```
     // sometimes string constants are missing - for example, iOS 6 cannot have UIFontTextStyleBody
     // the best thing you could do in iOS 6 is swizzle in preferredFontForTextStyle: and #define UIFontTextStyleBody
     // until...
     [symtab setAddress:&MyUIFontTextStyleBody forSymbol:@"_UIFontTextStyleBody"];
     UIFont *bodyFont = [UIFont preferredFontForTextStyle:UIFontTextStyleBody];
+```
