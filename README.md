@@ -1,7 +1,7 @@
 # KZMachO
 Some files for hacking mach binaries in memory.  This has not been thorougly tested.  Use at your own risk.
 
-A blog post explaining more in-depth might happen later.
+[A blog post walking through the rationale and discussing the details.](http://throwachair.com/2015/03/29/monkeypatching-compatibility-with-old-ios-versions/)
 
 What appears to work:
 * Monkey-patching classes and string symbols into iOS 7 on the simulator
