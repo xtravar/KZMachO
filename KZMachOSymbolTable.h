@@ -29,11 +29,6 @@
 -(void)setAddress:(const void*)address forSymbol:(NSString*)name;
 @end
 
-@interface KZMachOSymbolTable (Objects)
--(id)objectNamed:(NSString*)name;
--(void)setObject:(id)object forName:(NSString*)name;
-@end
-
 @interface KZMachOSymbolTable (Classes)
 // returns an array of class names that have no associated Class
 @property (nonatomic, readonly) NSArray *missingClassNames;
