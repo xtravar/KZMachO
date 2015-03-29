@@ -171,19 +171,6 @@ extern int main();
 }
 @end
 
-@implementation KZMachOSymbolTable (Objects)
--(id)objectNamed:(NSString *)name {
-    name = [@"_" stringByAppendingString:name];
-    return (__bridge id)[self addressForSymbol:name];
-}
-
--(void)setObject:(id)object forName:(NSString*)name {
-    name = [@"_" stringByAppendingString:name];
-    [self setAddress:(__bridge void*)object forSymbol:name];
-}
-
-@end
-
 @implementation KZMachOSymbolTable (Classes)
 //MARK: public API
 -(NSArray*)missingClassNames {
